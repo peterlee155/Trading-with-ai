@@ -1,0 +1,166 @@
+package com.example.domain
+
+import com.example.data.model.MistakeLog
+import com.example.data.model.TradeLog
+
+object SampleTuitionData {
+    val initialTuitionTrades = listOf(
+        TradeLog(
+            symbol = "TSLA",
+            marketType = "STOCKS",
+            timestamp = System.currentTimeMillis() - 1000L * 60 * 60 * 24 * 45,
+            timeframe = "1D",
+            marketRegime = "High Volatility Chop",
+            thesis = "Anticipated blowout earnings based on social media chatter. Bought high IV call options.",
+            entryPrice = 245.00,
+            stopLossPrice = 220.00,
+            targetPrice = 300.00,
+            positionSize = 140.0,
+            accountSizeAtEntry = 12000.0,
+            riskAmount = 3500.0,
+            riskPercent = 29.1,
+            rewardRiskRatio = 2.2,
+            exitPrice = 215.00,
+            pnl = -3400.00,
+            pnlR = -0.97,
+            holdingPeriodHours = 24.0,
+            classification = "FOMO Trade / Oversized",
+            emotionalState = "Euphoria & Greed",
+            isGoodTrade = false,
+            rootCause = "Excessive Leverage & Oversizing",
+            notes = "Classic gambling before binary event. Risked nearly 30% of entire portfolio on unconfirmed earnings speculation.",
+            isTuitionTrade = true
+        ),
+        TradeLog(
+            symbol = "SOL/USDT",
+            marketType = "CRYPTO",
+            timestamp = System.currentTimeMillis() - 1000L * 60 * 60 * 24 * 32,
+            timeframe = "15m",
+            marketRegime = "Chop / Low Liquidity Wick",
+            thesis = "Attempted to recover the $3,400 TSLA loss immediately with 10x leveraged perpetuals on a 15-minute candle breakout.",
+            entryPrice = 142.50,
+            stopLossPrice = 138.00,
+            targetPrice = 160.00,
+            positionSize = 200.0,
+            accountSizeAtEntry = 8600.0,
+            riskAmount = 2850.0,
+            riskPercent = 33.1,
+            rewardRiskRatio = 3.8,
+            exitPrice = 137.00,
+            pnl = -2850.00,
+            pnlR = -1.0,
+            holdingPeriodHours = 3.5,
+            classification = "Revenge Trade",
+            emotionalState = "Revenge / Tilt / Panic",
+            isGoodTrade = false,
+            rootCause = "Revenge Trading & Overleveraging",
+            notes = "Severe tilt. Urgent desire to 'win the money back' led to 10x leverage on an intraday wick. Classic account destroyer.",
+            isTuitionTrade = true
+        ),
+        TradeLog(
+            symbol = "NVDA",
+            marketType = "STOCKS",
+            timestamp = System.currentTimeMillis() - 1000L * 60 * 60 * 24 * 21,
+            timeframe = "4H",
+            marketRegime = "Bear Distribution",
+            thesis = "Bought pullback to $118 support. When support broke, moved stop loss down 3 times to $112 because 'NVDA always bounces'.",
+            entryPrice = 120.00,
+            stopLossPrice = 117.00, // original planned stop
+            targetPrice = 132.00,
+            positionSize = 250.0,
+            accountSizeAtEntry = 5750.0,
+            riskAmount = 1950.0,
+            riskPercent = 33.9,
+            rewardRiskRatio = 4.0,
+            exitPrice = 112.20,
+            pnl = -1950.00,
+            pnlR = -2.6,
+            holdingPeriodHours = 72.0,
+            classification = "Moved Stop / Late Exit",
+            emotionalState = "Denial & Hope",
+            isGoodTrade = false,
+            rootCause = "Poor Execution & Moving Stop Loss",
+            notes = "Violated the single most sacred rule of trading: never move a stop loss farther away. Planned risk was $750, actual loss was $1,950.",
+            isTuitionTrade = true
+        ),
+        TradeLog(
+            symbol = "BTC/USDT",
+            marketType = "CRYPTO",
+            timestamp = System.currentTimeMillis() - 1000L * 60 * 60 * 24 * 12,
+            timeframe = "1H",
+            marketRegime = "High Volatility Expansion",
+            thesis = "Saw massive green candle pump on crypto Twitter. Market bought at the top with no defined invalidation level.",
+            entryPrice = 64500.0,
+            stopLossPrice = 62000.0,
+            targetPrice = 70000.0,
+            positionSize = 0.48,
+            accountSizeAtEntry = 3800.0,
+            riskAmount = 1200.0,
+            riskPercent = 31.5,
+            rewardRiskRatio = 2.2,
+            exitPrice = 62000.0,
+            pnl = -1200.00,
+            pnlR = -1.0,
+            holdingPeriodHours = 8.0,
+            classification = "FOMO / Unclear Thesis",
+            emotionalState = "Anxiety / FOMO",
+            isGoodTrade = false,
+            rootCause = "Insufficient Research & Chasing",
+            notes = "Chased extended vertical impulse without waiting for consolidation or identifying where the thesis would be proven wrong.",
+            isTuitionTrade = true
+        ),
+        TradeLog(
+            symbol = "AAPL",
+            marketType = "STOCKS",
+            timestamp = System.currentTimeMillis() - 1000L * 60 * 60 * 24 * 5,
+            timeframe = "1D",
+            marketRegime = "Uptrend Pullback",
+            thesis = "Daily bullish pullback to 50 EMA on declining volume. Strict 1% risk defined. Stop placed below swing low.",
+            entryPrice = 222.00,
+            stopLossPrice = 219.00,
+            targetPrice = 231.00,
+            positionSize = 200.0,
+            accountSizeAtEntry = 2600.0,
+            riskAmount = 600.0,
+            riskPercent = 23.0,
+            rewardRiskRatio = 3.0,
+            exitPrice = 219.00,
+            pnl = -600.00,
+            pnlR = -1.0,
+            holdingPeriodHours = 36.0,
+            classification = "Valid Setup",
+            emotionalState = "Calm & Objective",
+            isGoodTrade = true, // GOOD TRADE!
+            rootCause = "None / Disciplined",
+            notes = "A textbook GOOD TRADE that lost money. System was followed, stop was respected, exit executed without emotion. Losing is just the cost of doing business.",
+            isTuitionTrade = true
+        )
+    )
+
+    val initialMistakes = listOf(
+        MistakeLog(
+            mistakeType = "Moving Stop Loss",
+            triggerCondition = "Position went against me; refused to accept being wrong.",
+            costDollars = 1200.0,
+            emotionalState = "Denial & Fear of Loss",
+            ruleBroken = "Rule #1: A stop loss can only be moved in the direction of profit, NEVER farther away.",
+            correctiveAction = "Hard platform stop loss submitted simultaneously with entry order. Hand off mouse."
+        ),
+        MistakeLog(
+            mistakeType = "Revenge Sizing Up",
+            triggerCondition = "Frustration immediately following a stopped out trade.",
+            costDollars = 2850.0,
+            emotionalState = "Tilt / Aggression",
+            ruleBroken = "Rule #4: Maximum 2 trades per session. Prohibited from trading within 2 hours of a stop-out.",
+            correctiveAction = "Mandatory 2-hour platform lockout after any loss. Walk away from screens."
+        ),
+        MistakeLog(
+            mistakeType = "Earnings Gambling (Binary Event)",
+            triggerCondition = "Social media hype promising huge post-earnings surge.",
+            costDollars = 3400.0,
+            emotionalState = "Greed / FOMO",
+            ruleBroken = "Rule #7: No directional speculative bets within 48 hours of binary macro/earnings events.",
+            correctiveAction = "Hold only cash or non-leveraged long term investments into binary news releases."
+        )
+    )
+}

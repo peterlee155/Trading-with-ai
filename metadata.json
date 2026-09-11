@@ -1,0 +1,6 @@
+{
+  "name": "Trading Mentor",
+  "description": "Brutally honest AI trading mentor, risk manager, trade journal, 22-step setup auditor, and quantitative discipline framework.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
